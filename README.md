@@ -1,15 +1,13 @@
 # Laravel Grunt Cache Buster
 
 This is a simple cache buster for Laravel 4 framework and Grunt task manager.
-The package will install grunt-cache-baster npm module automatically ([felthy/grunt-cachebuster](http://github.com/felthy/grunt-cachebuster)). All you have to is add a service provider and configure your Gruntfile.js. **No modification in .htaccess or NGINX configuration modifications are necessary.**
-
-Just add the following to your composer dev-dependencies and follow the instructions:
-
-	"aozisik/grunt-cache-buster": "dev-master"
-
-
+The package depends on grunt-cachebuster npm module ([felthy/grunt-cachebuster](http://github.com/felthy/grunt-cachebuster)). After you install the npm module and this package, all you have to is add a service provider and configure your Gruntfile.js. **No modification in .htaccess or NGINX configuration modifications are necessary.**
 
 ### Configuring Grunt
+
+First add the following module to your package.json and run npm :
+
+	"grunt-cachebuster": "^0.1.5"
 
 Add this to your grunt.initConfig
 
@@ -36,11 +34,15 @@ And then load the npm task and register it where necessary
 	//..
 	grunt.registerTask('buster', ['cachebuster']);
 	
-Make sure the cache buster task runs after all the other tasks. It will generate a file in your app/config directory by default. The package depends on this config file to function properly. After you set things up properly, run grunt to generate cachebuster.php
+Make sure the cache buster task runs after all the other tasks. It will generate a file in your app/config directory by default. The package depends on this config file to function properly. After you set things up properly, run grunt and make sure it generates "cachebuster.php" file properly.
 
 ### Configuring Laravel
 
-First you need to add the following service provider in your app/config/app.php:
+Install this package by adding the following dependency to your L4 project:
+
+	"aozisik/grunt-cache-buster": "dev-master"
+
+After the installation, you need to add the following service provider in your app/config/app.php:
 
 		'Aozisik\GruntCacheBuster\GruntCacheBusterServiceProvider'
 		
