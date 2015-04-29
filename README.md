@@ -1,7 +1,13 @@
 # Laravel Grunt Cache Buster
 
 This is a simple cache buster for Laravel 4 framework and Grunt task manager.
-The package will install grunt-cache-baster npm module automatically (git repo: felthy/grunt-cachebuster). All you have to is add a service provider and configure your Gruntfile.js. **No modification in .htaccess or NGINX configuration is necessary.**
+The package will install grunt-cache-baster npm module automatically ([felthy/grunt-cachebuster](http://github.com/felthy/grunt-cachebuster)). All you have to is add a service provider and configure your Gruntfile.js. **No modification in .htaccess or NGINX configuration modifications are necessary.**
+
+Just add the following to your composer dev-dependencies and follow the instructions:
+
+	"aozisik/grunt-cache-buster": "dev-master"
+
+
 
 ### Configuring Grunt
 
