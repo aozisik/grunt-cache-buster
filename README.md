@@ -44,7 +44,7 @@ Install this package by adding the following dependency to your L4 project:
 
 After the installation, you need to add the following service provider in your app/config/app.php:
 
-		'Aozisik\GruntCacheBuster\GruntCacheBusterServiceProvider'
+	'Aozisik\GruntCacheBuster\GruntCacheBusterServiceProvider'
 		
 Then wherever you want a cache-busted asset you can use the following instead of the default `asset()` helper
 
