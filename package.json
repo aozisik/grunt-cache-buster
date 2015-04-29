@@ -1,6 +1,5 @@
 {
   "dependencies": {
-    "grunt": "^0.4.5",
     "grunt-cachebuster": "^0.1.5"
   }
 }
